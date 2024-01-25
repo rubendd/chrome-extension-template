@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "template",
+    "description": "template of an extension",
+    "version": "1.0",
+    "action": {
+      "default_popup": "hello.html",
+      "default_icon": "hello_extensions.png"
+    },
+    "background": {
+        "service_worker": "src/background/index.js",
+        "type": "module"
+    },
+    "permisions": ["scripting","activeTab"]
+  }

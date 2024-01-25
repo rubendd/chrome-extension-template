@@ -1,0 +1,22 @@
+{
+  "name": "template",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "compile": "bunx tsc",
+    "copy-assets": "rsync -av --exclude 'tsconfig.json' --exclude 'src' --exclude 'dist' ./ dist/",
+    "build": "bun run clean && bun run compile && bun run copy-assets"
+  },
+  "dependencies": {
+    "@types/chrome": "^0.0.259",
+    "D": "^1.0.0"
+  }
+}
